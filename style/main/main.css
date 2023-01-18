@@ -1,0 +1,26 @@
+@import url(../vars/vars.scss);
+.main__client {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.main__client .main__client-text {
+  margin-top: 17px;
+}
+.main__client .main__client-img {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 1100px) {
+  .main__client .main__client-img {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-items: center;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,58 @@
+@import "../vars/vars.scss";
+
+.header__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 42px 0 37px 0;
+    .header__nav {
+        width: 53%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .header__nav-link{
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+        }
+        @media(max-width:926px) {
+            display: none;
+        }
+    }
+    .header__burger {
+        @media(min-width:926px) {
+            display: none;
+        }
+    }
+}
+.header__mainscreen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 150px;
+    @media(max-width:$md) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    .header__mainscreen-info {
+        display: flex;
+        flex-direction: column;
+        max-width: 495px;
+        .header__text {
+            margin: 40px 0 33px 0;
+        }
+        .header__btn {
+            width: 224px;
+            height: 65px;
+        }
+    }
+    .header__img-bg {
+        width: 100%;
+        transform: translate(120px);
+        @media(max-width:$md){
+            transform: none;
+        }
+    }
+}
+
