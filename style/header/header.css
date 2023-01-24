@@ -21,7 +21,7 @@ a {
 }
 
 .logo__text {
-  font-size: 27.1472px;
+  font-size: 27px;
   line-height: 33px;
 }
 .logo__text .logo__text-big {
@@ -32,9 +32,14 @@ a {
   font-size: 2.5rem;
   line-height: 1.225;
 }
-@media (max-width: 360px) {
+@media (max-width: 768px) {
   .title {
-    font-size: 2rem;
+    font-size: 2.1rem;
+  }
+}
+@media (max-width: 430px) {
+  .title {
+    font-size: 1.8rem;
   }
 }
 
@@ -44,6 +49,11 @@ a {
   line-height: 1.25;
   text-align: center;
 }
+@media (max-width: 430px) {
+  .subtitle {
+    font-size: 1.3rem;
+  }
+}
 
 .text {
   font-size: 1rem;
@@ -52,16 +62,22 @@ a {
 }
 
 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #2639ED;
   border-radius: 60px;
-  align-items: center;
-  padding: 20px 40px;
   color: #fff;
   letter-spacing: 0.065em;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.25;
   cursor: pointer;
+}
+@media (max-width: 430px) {
+  .btn {
+    font-size: 1rem;
+  }
 }
 
 .header__info {
@@ -103,6 +119,11 @@ a {
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
+  }
+}
+@media (max-width: 430px) {
+  .header__mainscreen {
+    margin-bottom: 80px;
   }
 }
 .header__mainscreen .header__mainscreen-info {

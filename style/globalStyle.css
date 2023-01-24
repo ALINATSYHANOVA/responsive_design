@@ -23,7 +23,7 @@ a {
 }
 
 .logo__text {
-  font-size: 27.1472px;
+  font-size: 27px;
   line-height: 33px;
 }
 .logo__text .logo__text-big {
@@ -34,9 +34,14 @@ a {
   font-size: 2.5rem;
   line-height: 1.225;
 }
-@media (max-width: 360px) {
+@media (max-width: 768px) {
   .title {
-    font-size: 2rem;
+    font-size: 2.1rem;
+  }
+}
+@media (max-width: 430px) {
+  .title {
+    font-size: 1.8rem;
   }
 }
 
@@ -46,6 +51,11 @@ a {
   line-height: 1.25;
   text-align: center;
 }
+@media (max-width: 430px) {
+  .subtitle {
+    font-size: 1.3rem;
+  }
+}
 
 .text {
   font-size: 1rem;
@@ -54,16 +64,22 @@ a {
 }
 
 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #2639ED;
   border-radius: 60px;
-  align-items: center;
-  padding: 20px 40px;
   color: #fff;
   letter-spacing: 0.065em;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.25;
   cursor: pointer;
+}
+@media (max-width: 430px) {
+  .btn {
+    font-size: 1rem;
+  }
 }
 
 .header__info {
@@ -107,6 +123,11 @@ a {
     gap: 30px;
   }
 }
+@media (max-width: 430px) {
+  .header__mainscreen {
+    margin-bottom: 80px;
+  }
+}
 .header__mainscreen .header__mainscreen-info {
   display: flex;
   flex-direction: column;
@@ -142,6 +163,11 @@ a {
     align-items: flex-start;
   }
 }
+@media (max-width: 430px) {
+  .main__client {
+    margin-bottom: 80px;
+  }
+}
 .main__client .main__client-text {
   margin-top: 17px;
 }
@@ -160,11 +186,11 @@ a {
     justify-content: space-evenly;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 430px) {
   .main__client .main__client-img {
     grid-template-columns: 1fr;
     gap: 40px;
-    justify-items: start;
+    justify-items: center;
   }
 }
 
@@ -176,6 +202,11 @@ a {
   gap: 90px;
   margin-bottom: 150px;
 }
+@media (max-width: 430px) {
+  .main__services {
+    margin-bottom: 80px;
+  }
+}
 .main__services .main__services-info {
   max-width: 396px;
 }
@@ -183,16 +214,31 @@ a {
   margin-bottom: 30px;
 }
 .main__services .main__services-blocks {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
   gap: 30px;
+  max-width: 650px;
+  min-height: 867px;
 }
 @media (max-width: 640px) {
   .main__services .main__services-blocks {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    flex-direction: column;
   }
+}
+.main__services .main__services-blocks .main__services-blocks-left {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  padding-top: 80px;
+}
+@media (max-width: 640px) {
+  .main__services .main__services-blocks .main__services-blocks-left {
+    padding-top: 0;
+  }
+}
+.main__services .main__services-blocks .main__services-blocks-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 .main__services .main__services-blocks .servic-block {
   display: flex;
@@ -238,9 +284,14 @@ a {
 }
 @media (max-width: 768px) {
   .main__agency {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column-reverse;
+    align-items: center;
     gap: 30px;
+  }
+}
+@media (max-width: 430px) {
+  .main__agency {
+    margin-bottom: 80px;
   }
 }
 .main__agency .main__agency-img-bg {
@@ -259,6 +310,11 @@ a {
   text-align: center;
   padding-bottom: 100px;
 }
+@media (max-width: 430px) {
+  .main__response-info {
+    padding-bottom: 50px;
+  }
+}
 .main__response-info .main__response-text {
   margin: 17px 0 0 0;
 }
@@ -270,9 +326,17 @@ a {
   gap: 50px;
   margin-bottom: 150px;
 }
-@media (max-width: 360px) {
+@media (max-width: 768px) {
+  .main__response-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+@media (max-width: 430px) {
   .main__response-block {
     flex-direction: column;
+    margin-bottom: 80px;
   }
 }
 .main__response-block .main__response-men-bg {
@@ -300,49 +364,81 @@ a {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  flex-wrap: wrap;
   min-height: 292px;
-  background: #F4F9FF;
+  background-image: url(../../img/form_bg.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 75px;
   margin-bottom: 150px;
   padding: 60px 15px;
+}
+@media (max-width: 785px) {
+  .main__form {
+    flex-direction: column;
+    gap: 20px;
+    background: #F4F9FF;
+  }
+}
+@media (max-width: 430px) {
+  .main__form {
+    margin-bottom: 50px;
+  }
 }
 .main__form .main__form-text {
   padding-top: 17px;
   font-size: 1.125rem;
 }
 .main__form .main__form-input-wrapper {
-  position: relative;
-  width: 479px;
-}
-.main__form .main__form-input-wrapper .main__form-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 479px;
+  height: 80px;
   border: 1px solid #F1F1F1;
   box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.15);
   border-radius: 60px;
-  width: 100%;
-  height: 80px;
+  padding-left: 34px;
+  padding-right: 10px;
+  background: #FFFFFF;
+}
+@media (max-width: 568px) {
+  .main__form .main__form-input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+  }
+}
+.main__form .main__form-input-wrapper .main__form-input {
+  border: none;
   font-size: 1rem;
-  color: #565656;
-  padding: 0 34px;
   outline: none;
+}
+@media (max-width: 568px) {
+  .main__form .main__form-input-wrapper .main__form-input {
+    width: 100%;
+  }
 }
 .main__form .main__form-input-wrapper .main__form-btn {
   width: 193px;
-  height: 60px;
+  height: 65px;
   font-size: 1rem;
-  position: absolute;
-  right: 10px;
-  top: 10px;
 }
-@media (max-width: 768px) {
+@media (max-width: 568px) {
   .main__form .main__form-input-wrapper .main__form-btn {
-    width: 100%;
-    height: 80px;
-    position: static;
-    text-align: center;
-    font-size: 1.25rem;
-    margin-top: 20px;
-    padding-top: 25px;
+    display: none;
+  }
+}
+.main__form .main__form-btn-width {
+  width: 100%;
+  min-height: 60px;
+  font-size: 1rem;
+}
+@media (min-width: 568px) {
+  .main__form .main__form-btn-width {
+    display: none;
   }
 }
 
